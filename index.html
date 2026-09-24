@@ -427,7 +427,9 @@
                         <h3 class="text-2xl font-bold text-brand-navy mb-2">Book Your Slot</h3>
                         <p class="text-slate-500 text-sm mb-6">Send us your details and preferred package. We will contact you shortly.</p>
 
-                        <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="inquiry-form" class="space-y-5">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="901dd91a-7543-4825-b055-7202ba30efde">
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
                                 <input type="text" id="user-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-sm">
