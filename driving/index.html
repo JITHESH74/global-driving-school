@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Driving School | Learn to Drive Safely in Kottayi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            primary: '#1E3A8A',
+                            accent: '#F59E0B',
+                            lightBg: '#F8FAFC',
+                            cardBg: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #1E3A8A 0%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-brand-lightBg text-slate-800 font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-brand-primary text-brand-accent rounded-xl flex items-center justify-center font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold text-brand-navy tracking-tight block leading-none">GLOBAL</span>
+                    <span class="text-xs font-semibold text-brand-accent uppercase tracking-widest block mt-0.5">Driving School</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-brand-primary transition-colors">Why Choose Us</a>
+                <a href="#packages" class="hover:text-brand-primary transition-colors">Courses & Pricing</a>
+                <a href="#location" class="hover:text-brand-primary transition-colors">Location</a>
+                <a href="#contact" class="hover:text-brand-primary transition-colors">Contact Us</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:9495502387" class="flex items-center text-sm font-bold text-brand-primary hover:text-brand-accent transition-colors">
+                    <i class="fa-solid fa-phone mr-2 text-brand-accent"></i> +91 9495502387
+                </a>
+                <a href="#packages" class="bg-brand-accent hover:bg-amber-600 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Enroll Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-brand-primary focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-slate-50">Why Choose Us</a>
+            <a href="#packages" class="mobile-nav-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-slate-50">Courses & Pricing</a>
+            <a href="#location" class="mobile-nav-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-slate-50">Location & Map</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-slate-50">Contact Us</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                <a href="tel:9495502387" class="flex items-center justify-center py-2.5 font-bold text-brand-primary bg-slate-50 rounded-xl">
+                    <i class="fa-solid fa-phone mr-2 text-brand-accent"></i> Call +91 9495502387
+                </a>
+                <a href="https://wa.me/919495502387" target="_blank" class="flex items-center justify-center py-2.5 font-bold text-white bg-green-600 rounded-xl">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-accent/20 text-brand-accent border border-brand-accent/30 mb-6">
+                    <i class="fa-solid fa-shield-halved mr-1.5"></i> Government Approved Driving School
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+                    Master the Road with <span class="text-brand-accent">Confidence</span> & Safety.
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8">
+                    Welcome to <strong class="text-white">Global Driving School</strong> at Poothattukulam, Kottayi. Learn from certified, patient instructors with flexible timing for 2-wheeler and 4-wheeler training.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#packages" class="bg-brand-accent hover:bg-amber-600 text-slate-950 font-bold text-center px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-base">
+                        <i class="fa-solid fa-car-side mr-2"></i> View Pricing & Courses
+                    </a>
+                    <a href="https://maps.app.goo.gl/TuwzaM2nJYyvr1yM7" target="_blank" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-center px-8 py-4 rounded-xl backdrop-blur-md border border-white/20 transition-all text-base flex items-center justify-center">
+                        <i class="fa-solid fa-location-dot mr-2 text-red-400"></i> Open Map Location
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-brand-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-brand-navy sm:text-4xl">Why Learn With Us?</h2>
+                <p class="mt-3 text-slate-600 text-lg">We offer comprehensive driving instruction designed to make you a confident driver for life.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-primary rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">Certified Instructors</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Friendly and patient instructors trained to teach drivers of all skill levels with ease.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-amber-50 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">Flexible Timings</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Convenient morning and evening batches designed to fit around your work or college schedule.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">Dual-Control Vehicles</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Practice safely in dual-control cars that ensure complete peace of mind on busy roads.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-2">RTO Test Preparation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dedicated ground practice for H-track (car) and 8-track (2-wheeler) RTO licensing exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-16 md:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Transparent Pricing</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-1">Our Training Packages</h2>
+                <p class="mt-3 text-slate-600 text-lg">Transparent course pricing with no hidden charges. Select a course to apply directly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Package 1: Combined Combo (Featured) -->
+                <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-xl relative border-2 border-brand-accent flex flex-col justify-between transform lg:-translate-y-2">
+                    <div class="absolute -top-4 right-8 bg-brand-accent text-slate-950 font-extrabold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md">
+                        Best Value
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-brand-accent/20 rounded-lg flex items-center justify-center text-brand-accent">
+                                <i class="fa-solid fa-layer-group text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">4 Wheeler + 2 Wheeler</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6">Complete combined license package for four-wheeler and two-wheeler.</p>
+                        
+                        <div class="mb-8 pb-6 border-b border-slate-800">
+                            <span class="text-4xl font-black text-white">₹8,500</span>
+                            <span class="text-slate-400 text-sm">/ total course</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-slate-300 text-sm">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-accent mt-0.5 mr-3"></i>
+                                <span><strong class="text-white">20 Practical Classes</strong> for 4-Wheeler</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-accent mt-0.5 mr-3"></i>
+                                <span><strong class="text-white">3 Dedicated Classes</strong> for 2-Wheeler</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-accent mt-0.5 mr-3"></i>
+                                <span>Steering, Parking & Reverse Practice</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-accent mt-0.5 mr-3"></i>
+                                <span>Complete RTO Test Assistance</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="selectPackage('4 Wheeler + 2 Wheeler Combo (₹8,500)')" class="w-full bg-brand-accent hover:bg-amber-600 text-slate-950 font-bold py-3.5 px-6 rounded-xl transition-colors shadow-lg text-center block">
+                        Enroll in Combo Plan
+                    </button>
+                </div>
+
+                <!-- Package 2: 2 Wheeler Only -->
+                <div class="bg-brand-lightBg rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between hover:border-slate-300 transition-all">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-brand-primary">
+                                <i class="fa-solid fa-motorcycle text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-navy">2 Wheeler Only</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-6">Targeted training to master motorcycle/scooter balancing and RTO 8-track.</p>
+                        
+                        <div class="mb-8 pb-6 border-b border-slate-200">
+                            <span class="text-4xl font-black text-brand-navy">₹2,500</span>
+                            <span class="text-slate-500 text-sm">/ total course</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-slate-600 text-sm">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span><strong class="text-slate-800">3 Comprehensive Classes</strong> included</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span>Balance, Control & Slow Speed Riding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span>Road Traffic Rules & Hand Signals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span>RTO '8' Shape Practice</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="selectPackage('2 Wheeler Only (₹2,500)')" class="w-full bg-brand-navy hover:bg-slate-800 text-white font-bold py-3.5 px-6 rounded-xl transition-colors text-center block">
+                        Enroll in 2-Wheeler
+                    </button>
+                </div>
+
+                <!-- Package 3: 4 Wheeler Only -->
+                <div class="bg-brand-lightBg rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between hover:border-slate-300 transition-all">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-brand-primary">
+                                <i class="fa-solid fa-car text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-navy">4 Wheeler Only</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-6">Complete car driving lessons covering city traffic, parking & highway driving.</p>
+                        
+                        <div class="mb-8 pb-6 border-b border-slate-200">
+                            <span class="text-4xl font-black text-brand-navy">₹6,500</span>
+                            <span class="text-slate-500 text-sm">/ total course</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-slate-600 text-sm">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span><strong class="text-slate-800">20 Practical Classes</strong> included</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span>Clutch Control & Slope Driving</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span>Parallel & Reverse Parking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-3"></i>
+                                <span>RTO 'H' Track Training</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="selectPackage('4 Wheeler Only (₹6,500)')" class="w-full bg-brand-navy hover:bg-slate-800 text-white font-bold py-3.5 px-6 rounded-xl transition-colors text-center block">
+                        Enroll in 4-Wheeler
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-16 md:py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-5">
+                    <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Easy to Find</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-1 mb-4">Our Location in Kottayi</h2>
+                    <p class="text-slate-300 text-base mb-6 leading-relaxed">
+                        We are conveniently located at Poothattukulam, Kottayi. Visit our branch or click below to open exact directions in Google Maps directly on your smartphone.
+                    </p>
+
+                    <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700/60 mb-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-accent/20 rounded-xl flex items-center justify-center text-brand-accent text-xl flex-shrink-0">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Global Driving School</h4>
+                                <p class="text-slate-300 text-sm mt-1">Poothattukulam, Kottayi, Kerala</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/TuwzaM2nJYyvr1yM7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full sm:w-auto bg-brand-accent hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg">
+                        <i class="fa-solid fa-location-arrow mr-2"></i> Get Directions on Google Maps
+                    </a>
+                </div>
+
+                <!-- Google Maps Embed Container -->
+                <div class="lg:col-span-7">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800 h-[380px] relative bg-slate-800">
+                        <iframe 
+                            title="Global Driving School Location Map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2!2d76.54!3d10.74!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ0JzI0LjAiTiA3NsKwMzInMjQuMCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-brand-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Contact Information</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-1 mb-6">Reach Out To Us</h2>
+                        <p class="text-slate-600 leading-relaxed mb-8">
+                            Have questions regarding licensing processes, documents required, or class timings? Feel free to call, message, or email us.
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- Address -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-brand-primary text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-bold text-brand-navy">Address</h4>
+                                    <p class="text-slate-600 text-sm mt-0.5">Poothattukulam, Kottayi</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-brand-primary text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-bold text-brand-navy">Phone Number</h4>
+                                    <a href="tel:9495502387" class="text-slate-700 hover:text-brand-primary text-sm mt-0.5 block font-bold">
+                                        +91 9495502387
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-brand-primary text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-bold text-brand-navy">Email Address</h4>
+                                    <a href="mailto:globaldriving1@gmail.com" class="text-slate-600 hover:text-brand-primary text-sm mt-0.5 block font-medium">
+                                        globaldriving1@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instant Communication Buttons -->
+                    <div class="mt-8 pt-8 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                        <a href="tel:9495502387" class="flex-1 bg-brand-navy hover:bg-slate-800 text-white font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center text-sm shadow-sm transition-all">
+                            <i class="fa-solid fa-phone mr-2"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/919495502387?text=Hello%20Global%20Driving%20School,%20I%20would%20like%20to%20enquire%20about%20driving%20classes." target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center text-sm shadow-sm transition-all">
+                            <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-200">
+                        <h3 class="text-2xl font-bold text-brand-navy mb-2">Book Your Slot</h3>
+                        <p class="text-slate-500 text-sm mb-6">Send us your details and preferred package. We will contact you shortly.</p>
+
+                        <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
+                                <input type="text" id="user-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                                <input type="tel" id="user-phone" required placeholder="Enter your 10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Selected Package</label>
+                                <select id="package-select" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-sm bg-white">
+                                    <option value="4 Wheeler + 2 Wheeler Combo (₹8,500)">4 Wheeler + 2 Wheeler Combo (₹8,500)</option>
+                                    <option value="2 Wheeler Only (₹2,500)">2 Wheeler Only (₹2,500)</option>
+                                    <option value="4 Wheeler Only (₹6,500)">4 Wheeler Only (₹6,500)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message / Time Preference</label>
+                                <textarea id="user-message" rows="3" placeholder="Morning / Evening batch preferences or additional questions..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-primary hover:bg-blue-900 text-white font-bold py-4 rounded-xl shadow-md transition-all text-sm">
+                                Submit Registration Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-brand-accent text-slate-950 rounded-lg flex items-center justify-center font-black text-lg">
+                        G
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-tight">GLOBAL DRIVING SCHOOL</span>
+                </div>
+
+                <div class="text-sm text-center md:text-left">
+                    Poothattukulam, Kottayi | Contact: <a href="tel:9495502387" class="text-white hover:text-brand-accent font-semibold">+91 9495502387</a>
+                </div>
+
+                <p class="text-xs text-slate-500">
+                    &copy; <span id="year"></span> Global Driving School. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-xl flex items-center space-x-3 transition-all duration-300 transform translate-y-24 opacity-0 z-50">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <div>
+            <h5 class="font-bold text-sm">Request Received!</h5>
+            <p class="text-xs text-emerald-100">We will call you shortly to confirm details.</p>
+        </div>
+    </div>
+
+    <script>
+        // Dynamic Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile navbar on clicking link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Select package and scroll directly to contact form
+        function selectPackage(packageName) {
+            const packageSelect = document.getElementById('package-select');
+            if (packageSelect) {
+                packageSelect.value = packageName;
+            }
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            document.getElementById('inquiry-form').reset();
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
